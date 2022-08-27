@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Personal">
+  <ClassDiagramComponents>
+    <Class name="EmpleadoPorComision" package="" visibility="public" xPosition="127.0" yPosition="15.0">
+      <Fields>
+        <Field name="primerNombre" type="String" visibility="private"/>
+        <Field name="apellidoPaterno" type="String" visibility="private"/>
+        <Field name="numeroSeguroSocial" type="String" visibility="private"/>
+        <Field name="ventasBrutas" type="double" visibility="private"/>
+        <Field name="tarifaComision" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nss"/>
+          <Argument type="double" name="ventas"/>
+          <Argument type="double" name="tarifa"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="EmpleadoBaseMasComision" package="" visibility="public" xPosition="127.0" yPosition="234.0">
+      <Fields>
+        <Field name="primerNombre" type="String" visibility="private"/>
+        <Field name="apellidoPaterno" type="String" visibility="private"/>
+        <Field name="numeroSeguroSocial" type="String" visibility="private"/>
+        <Field name="ventasBrutas" type="double" visibility="private"/>
+        <Field name="tarifaComision" type="double" visibility="private"/>
+        <Field name="salarioBase" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nss"/>
+          <Argument type="double" name="ventas"/>
+          <Argument type="double" name="tarifa"/>
+          <Argument type="double" name="salario"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

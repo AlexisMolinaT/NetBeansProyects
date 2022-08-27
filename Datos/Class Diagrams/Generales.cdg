@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Generales">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" xPosition="335.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellidos" type="String" visibility="private"/>
+        <Field name="fechaNac" type="int" visibility="private"/>
+        <Field name="NC" type="int" visibility="private"/>
+        <Field name="grupo" type="String" visibility="private"/>
+        <Field name="horario" type="Horario" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="dameGrupo" returnType="String" visibility="public"/>
+        <Method name="ponGrupo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Grupo" package=" " visibility="public" xPosition="63.0" yPosition="140.0">
+      <Fields>
+        <Field name="codigo" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="matricula" returnType="void" visibility="public"/>
+        <Method name="Alumno" returnType="void" visibility="public"/>
+        <Method name="mostrarDatosAlumno" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Horario" package="" visibility="public" xPosition="63.0" yPosition="381.0">
+      <Fields>
+        <Field name="dia" type="String" visibility="private"/>
+        <Field name="horaInicio" type="int" visibility="private"/>
+        <Field name="horaFin" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="d"/>
+          <Argument type="int" name="hi"/>
+          <Argument type="int" name="hf"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ObtenerDia" returnType="String" visibility="public"/>
+        <Method name="obtenerhorarioInicio" returnType="int" visibility="public"/>
+        <Method name="obtenerhorarioFin" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Asignatura" package="" visibility="public" xPosition="324.0" yPosition="362.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="horas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="modificarHoras" returnType="int" visibility="public">
+          <Argument type="int" name="h"/>
+        </Method>
+        <Method name="agregarUnidad" returnType="t" visibility="public">
+          <Argument type="t" name="Tema"/>
+        </Method>
+        <Method name="quitarUnidad" returnType="t" visibility="public">
+          <Argument type="t" name="Tema"/>
+        </Method>
+        <Method name="listarUnidades" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Calificacion" package="" visibility="public" xPosition="776.0" yPosition="272.0">
+      <Fields>
+        <Field name="nota1" type="double" visibility="private"/>
+        <Field name="nota2" type="double" visibility="private"/>
+        <Field name="nota3" type="double" visibility="private"/>
+        <Field name="notaFinal" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="asignarNota1" returnType="void" visibility="public"/>
+        <Method name="asignarNota2" returnType="void" visibility="public"/>
+        <Method name="asignarNota3" returnType="void" visibility="public"/>
+        <Method name="calcularNotaFinal" returnType="void" visibility="public"/>
+        <Method name="obtenerNotaFinal" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Inscripciones" package="" visibility="public" xPosition="76.0" yPosition="20.0">
+      <Literals>
+        <Literal name="ORDINARIAS"/>
+        <Literal name="EXTEMPORANEAS"/>
+      </Literals>
+    </Enum>
+    <Class name="Temas" package="" visibility="public" xPosition="796.0" yPosition="83.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="horas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="verMoodle" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ModalidadVirtual" package="" visibility="public" xPosition="565.0" yPosition="41.0">
+      <Fields>
+        <Field name="url" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="conectar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="Obtener" source="Calificacion" target="Asignatura" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Contenido" source="Asignatura" target="Temas" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Estudiantes" source=" .Grupo" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="horas" source="Horario" target=" .Grupo" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Inscripciones" source="Alumno" target="Asignatura" type="Default" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <IsRelation name="is" source="ModalidadVirtual" target="Asignatura"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

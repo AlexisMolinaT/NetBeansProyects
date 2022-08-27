@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Inicial">
+  <ClassDiagramComponents>
+    <Class name="Operaciones" package="" visibility="public" xPosition="226.0" yPosition="26.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Suma" returnType="int" visibility="public">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Method>
+        <Method name="Division" returnType="int" visibility="public">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="OperacionesAbstract" package="int" visibility="public" isAbstract="true" xPosition="11.0" yPosition="8.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Suma" returnType="int" visibility="public" isAbstract="true">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Method>
+        <Method name="Resta" returnType="int" visibility="public">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Method>
+        <Method name="Multplicacion" returnType="int" visibility="public" isAbstract="true">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Binario" package="" visibility="public" xPosition="11.0" yPosition="335.0">
+      <Fields>
+        <Field name="RangoElem" type="int" visibility="public"/>
+        <Field name="numDigitos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Octal" package="" visibility="public" xPosition="-6.0" yPosition="222.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Hexadecimal" package="" visibility="public" xPosition="169.0" yPosition="165.0">
+      <Fields>
+        <Field name="RangoElem" type="Object" visibility="private"/>
+        <Field name="intnumDigitos" type="Object" visibility="private"/>
+        <Field name="intNumCaracter" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="TipoSistema" package="" visibility="public" xPosition="192.0" yPosition="335.0">
+      <Fields>
+        <Field name="TipoSistema" type="Syting" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Suma" returnType="int" visibility="public"/>
+        <Method name="Resta" returnType="int" visibility="public"/>
+        <Method name="Multiplicacion" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Decimal" package="" visibility="public" xPosition="11.0" yPosition="494.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Operaciones" target="int.OperacionesAbstract"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

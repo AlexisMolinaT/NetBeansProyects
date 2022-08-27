@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Basicas">
+  <ClassDiagramComponents>
+    <Class name="Suma" package="" visibility="public" xPosition="119.0" yPosition="22.0">
+      <Fields>
+        <Field name="suma" type="int" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Resta" package="" visibility="public" xPosition="636.0" yPosition="22.0">
+      <Fields>
+        <Field name="Resta" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Multiplicacion" package="" visibility="public" xPosition="119.0" yPosition="408.0">
+      <Fields>
+        <Field name="multi" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Division" package="" visibility="public" xPosition="636.0" yPosition="408.0">
+      <Fields>
+        <Field name="Divi" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Operacion" package="" visibility="public" xPosition="305.0" yPosition="124.0">
+      <Fields>
+        <Field name="n1" type="int" visibility="private"/>
+        <Field name="n2" type="int" visibility="private"/>
+        <Field name="Operaciones" type="int" visibility="private"/>
+        <Field name="resultado" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="n1"/>
+          <Argument type="int" name="n2"/>
+          <Argument type="int" name="operacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarResultado" returnType="int" visibility="public">
+          <Argument type="int" name="n1"/>
+          <Argument type="int" name="n2"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Suma" target="Operacion"/>
+    <IsRelation name="is" source="Resta" target="Operacion"/>
+    <IsRelation name="is" source="Division" target="Operacion"/>
+    <IsRelation name="is" source="Multiplicacion" target="Operacion"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

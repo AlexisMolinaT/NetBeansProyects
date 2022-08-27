@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Aritmeticas">
+  <ClassDiagramComponents>
+    <Class name="Suma" package="" visibility="public" xPosition="-1.0" yPosition="15.0">
+      <Fields>
+        <Field name="suma" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="n1"/>
+          <Argument type="int" name="n2"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Resta" package="" visibility="public" xPosition="181.0" yPosition="15.0">
+      <Fields>
+        <Field name="resta" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="n1"/>
+          <Argument type="int" name="n2"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Multiplicacion" package="" visibility="public" xPosition="-1.0" yPosition="431.0">
+      <Fields>
+        <Field name="Multi" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="n1"/>
+          <Argument type="int" name="n2"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Division" package="" visibility="public" xPosition="206.0" yPosition="431.0">
+      <Fields>
+        <Field name="div" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="n1"/>
+          <Argument type="int" name="n2"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Operaciones" package="" visibility="public" xPosition="24.0" yPosition="168.0">
+      <Fields>
+        <Field name="n1" type="int" visibility="public"/>
+        <Field name="n2" type="int" visibility="public"/>
+        <Field name="resultado" type="int" visibility="public"/>
+        <Field name="operacion" type="char" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="n1"/>
+          <Argument type="int" name="n2"/>
+          <Argument type="char" name="operacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarResultado" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Division" target="Operaciones"/>
+    <IsRelation name="is" source="Suma" target="Operaciones"/>
+    <IsRelation name="is" source="Multiplicacion" target="Operaciones"/>
+    <IsRelation name="is" source="Resta" target="Operaciones"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

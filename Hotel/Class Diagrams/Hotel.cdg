@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Hotel">
+  <ClassDiagramComponents>
+    <Class name="Hotel" package="" visibility="public" xPosition="172.0" yPosition="46.0">
+      <Fields>
+        <Field name="nombreC" type="char" visibility="public"/>
+        <Field name="estrellas" type="int" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="590.0" yPosition="222.0">
+      <Fields>
+        <Field name="nombre" type="char" visibility="public"/>
+        <Field name="direccion" type="char" visibility="public"/>
+        <Field name="telefono" type="int" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Esporadico" package="" visibility="public" xPosition="576.0" yPosition="427.0">
+      <Fields>
+        <Field name="informacionOfertas" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Suit" package="" visibility="public" xPosition="297.0" yPosition="408.0">
+      <Fields>
+        <Field name="banera" type="boolean" visibility="public"/>
+        <Field name="sauna" type="boolean" visibility="public"/>
+        <Field name="mirador" type="boolean" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Sencilla" package="" visibility="public" xPosition="-5.0" yPosition="378.0">
+      <Fields>
+        <Field name="exterior" type="boolean" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Habitacion" package="" visibility="public" xPosition="37.0" yPosition="197.0">
+      <Fields>
+        <Field name="NumCama" type="int" visibility="public"/>
+        <Field name="tarifa" type="float" visibility="public"/>
+        <Field name="foto" type="Object" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Reserva" package="" visibility="public" xPosition="309.0" yPosition="210.0">
+      <Fields>
+        <Field name="fecha_inicio" type="String" visibility="public"/>
+        <Field name="dias" type="int" visibility="public"/>
+        <Field name="fecha_fin" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Habitual" package="" visibility="public" xPosition="590.0" yPosition="46.0">
+      <Fields>
+        <Field name="descuentos" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Doble" package="" visibility="public" xPosition="102.0" yPosition="494.0">
+      <Fields>
+        <Field name="camaMatrimonio" type="boolean" visibility="public"/>
+        <Field name="camaSencilla" type="boolean" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Hotel" target="Habitacion" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Sencilla" target="Habitacion"/>
+    <IsRelation name="is" source="Suit" target="Habitacion"/>
+    <UseRelation name="" source="Reserva" target="Habitacion" sourceCardinality="0..1" targetCardinality="0..*"/>
+    <IsRelation name="is" source="Esporadico" target="Cliente"/>
+    <IsRelation name="is" source="Habitual" target="Cliente"/>
+    <UseRelation name="tiene" source="Cliente" target="Reserva" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <IsRelation name="is" source="Doble" target="Habitacion"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
